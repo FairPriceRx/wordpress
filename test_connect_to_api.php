@@ -7,6 +7,8 @@ $post = array(
 );
 
 curl_setopt($ch, CURLOPT_URL, 'http://35.175.48.5:8080/create_order')
+curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json");
+curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $html = curl_exec($ch);
